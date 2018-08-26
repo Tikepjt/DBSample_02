@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="DataBase 활용하기"
+        android:textColor="@color/colorAccent"
+        android:textSize="25dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/dbNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="데이터베이스 이름을 입력"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnCreateDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="데이터베이스 만들기" />
+
+    <EditText
+        android:id="@+id/tbNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="테이블명을 입력"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnCreateTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="테이블 만들기"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="결과 확인 : "
+        android:textSize="14dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
